@@ -1,0 +1,39 @@
+{
+  "name": "nt-connect-multiparty",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --reporter spec",
+    "test-ci": "nyc --reporter=text npm test",
+    "test-cov": "nyc --reporter=html --reporter=text npm test"
+  },
+  "description": "multipart parsing middleware for connect using multiparty",
+  "private": false,
+  "dependencies": {
+    "http-errors": "~1.7.0",
+    "multiparty": "~4.2.1",
+    "on-finished": "~2.3.0",
+    "qs": "~6.5.2",
+    "type-is": "~1.6.16"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "HISTORY.md",
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "homepage": "https://github.com/expressjs/connect-multiparty#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "connect": "3.6.6",
+    "eslint": "2.13.1",
+    "mocha": "5.2.0",
+    "nyc": "11.9.0",
+    "safe-buffer": "5.1.2",
+    "should": "13.2.3",
+    "supertest": "3.1.0"
+  }
+}
