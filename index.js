@@ -47,14 +47,14 @@ function multipart(options) {
 
   return function multipart(req, res, next) {
 
-    const { sinalId, componenteId, diagramaId } = req.body;
+    const { sinalId, componenteId, diagramaId, type } = req.body;
     const url = req.url;
 
     if (url == '/api/newtecnoscopio/pdf/sinal/upload')
-      if (!sinalId) return next();
+      if (!sinalId && type != 'pdf') return next();
 
     if (url == '/api/newtecnoscopio/pdf/diagrama/upload')
-      if (!componenteId && !diagramaId) return next();
+      if (!componenteId && !diagramaId && type != 'pdf') return next();
 
     if (req._body) return next();
     req.body = req.body || {};
